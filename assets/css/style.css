@@ -1,8 +1,12 @@
 @import url('./reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@font-face {
+/* @font-face {
     font-family: m;
     src: url();
+} */
+
+:root{
+    --span-orange:#FF8A56;
 }
 *{
     box-sizing: border-box;
@@ -10,16 +14,19 @@
 }
 a{
     text-decoration: none;
+    /* color: #fff;
+    transition: all .4s; */
 }
 
 body{
     font-family: 'Roboto', sans-serif;
 }
 
+/* ------HEADER----- */
 .header{
     display: flex;
     justify-content: space-between;
-    padding:  44px 112.5px;
+    padding:  44px 112.5px 0;
     align-items: center;
     
 }
@@ -83,4 +90,108 @@ body{
     color: #fff;
     font-size: 34px;
     cursor: pointer;
+}
+
+/* -------INTODUCTION START-----*/
+.intoduction{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 112.5px ;
+    
+}
+.intoduction > .into-left-side > h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    min-width: 560px;
+}
+
+.intoduction > .into-left-side h1 span{
+    color:var(--span-orange);
+}
+
+.into-right-side{
+    padding-top: 70px;
+    min-width: 500px;
+    height: 500px;
+}
+.into-right-side img{
+    /* height: 595px; */
+    width: 100%;
+    height: 100%;
+    min-width: 400px;
+    object-fit: contain;
+}
+
+.into-left-side{
+    padding-top: 134px;
+}
+
+
+.into-left-side p{
+    padding-top: 34px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #666;
+}
+
+.book{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    background-color: #000;
+    padding: 17px 30px 23px;
+    border: none;
+    margin-top: 55px;
+    margin-right: 70px;
+}
+
+
+.cv{
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    color: #000;
+    margin-right: 14.33px;
+}
+
+.bottom-icon{
+    border: none;
+    background-color: transparent;
+    font-size: 13.33px;
+}
+/* -------INTODUCTION END-----*/
+
+
+/* 991 768 576 */
+ 
+@media(max-width:1200px){
+    .intoduction{
+        padding: 0 40px;
+        flex-wrap: wrap;
+    }
+    .into-left-side h1{
+        font-size: 2.5rem;
+    }
+    .into-left-side{
+        min-width: 560px;
+    }
+    .into-right-side{
+        min-width: 390px;
+    }
+}
+@media(max-width:1058px){
+    .intoduction{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+@media(max-width:618px){
+    .into-left-side h1{
+        font-size: 2.4rem !important;
+        text-align: center;
+    }
+    .into-left-side{
+        min-width: 360px;
+    }
 }
