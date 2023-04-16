@@ -1,10 +1,14 @@
 @import url('./reset.css');
+@import url('./media.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
     --span-orange:#FF8A56;
     --gree-color:#666;
     --soft-black:#222;
+}
+*{
+    /* outline: 1px solid red; */
 }
 
 a{
@@ -14,6 +18,7 @@ a{
 body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    
 }
 
 /* ------HEADER----- */
@@ -34,7 +39,7 @@ body{
     display: none;
 }
 
-@media(max-width:800px){
+@media(max-width:992px){
     .header{
         padding: 41px 40px 0;
     }
@@ -91,7 +96,6 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 0 112.5px ;
-    
 }
 .intro-left-side{
     padding-top: 134px;
@@ -144,6 +148,5 @@ body{
     min-width: 400px;
     object-fit: contain;
 }
-
 
 /* -------INTODUCTION END-----*/
